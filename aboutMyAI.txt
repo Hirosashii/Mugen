@@ -1,0 +1,25 @@
+2015/8/8 (by ma-bo)
+
+AI made by myself(ma-bo) was equipped.
+
+If you dont apply Ran's AI.
+this AI will be activated.
+
+My AI simulate my playing style.
+I am glad if you enjoy it.
+
+
+======How to select difficulty?========
+
+Open [tios-3.cns]
+and serch [AI difficulty]
+
+ var(18) = ***
+
+and change this value
+
+ 0- none
+ 1- easy
+ 2- normal
+ 3- strong
+ 4- strong(less limited super reactivity)

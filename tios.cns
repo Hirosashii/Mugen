@@ -1,0 +1,147 @@
+[Data]
+life = 1000
+attack = 100
+defence = 100
+fall.defence_up = 55
+liedown.time = 100
+airjuggle = 15
+sparkno = 2
+guard.sparkno = 40
+KO.echo = 0
+volume = 250
+IntPersistIndex = 50
+FloatPersistIndex = 40
+
+[Size]
+xscale = 1.0           ;Horizontal scaling factor.
+yscale = 1.0           ;Vertical scaling factor.
+ground.back = 18     ;Player width (back, ground)
+ground.front = 14    ;Player width (front, ground)
+air.back = 18        ;Player width (back, air)
+air.front = 15       ;Player width (front, air)
+height = 45          ;Height of player (for opponent to jump over)
+attack.dist = 100    ;Default attack distance
+proj.attack.dist = 64 ;Default attack distance for projectiles
+proj.doscale = 0     ;Set to 1 to scale projectiles too
+head.pos = -2, -76   ;Approximate position of head
+mid.pos = 0, -53    ;Approximate position of midsection
+shadowoffset = 0     ;Number of pixels to vertically offset the shadow
+draw.offset = 0,0    ;Player drawing offset in pixels (x, y)
+
+[Velocity]
+walk.fwd  = 2.3      ;Walk forward
+walk.back = -2.3     ;Walk backward
+run.fwd  = 4.6, 0    ;Run forward (x, y)
+run.back = -4.5,-3.8 ;Hop backward (x, y)
+jump.neu = 0,-8.9    ;Neutral jumping velocity (x, y)
+jump.back = -2.55    ;Jump back Speed (x, y)
+jump.fwd = 2.5       ;Jump forward Speed (x, y)
+runjump.back = -2.55,-8.1 ;Running jump speeds (opt)
+runjump.fwd = 4,-7.1      ;.
+airjump.neu = 0,-7.1      ;.
+airjump.back = -2.55      ;Air jump speeds (opt)
+airjump.fwd = 2.5         ;.
+
+[Movement]
+airjump.num = 1      ;Number of air jumps allowed (opt)
+airjump.height = 35  ;Minimum distance from ground before you can air jump (opt)
+yaccel = .43         ;Vertical acceleration
+stand.friction = .85  ;Friction coefficient when standing
+crouch.friction = .82 ;Friction coefficient when crouching
+
+
+;---------------------------------------------------------------------------
+; Lose by Time Over
+[Statedef 170]
+type = S
+ctrl = 0
+anim = 170
+velset = 0,0
+
+[State 170, 1]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+time = 1
+
+
+;---------------------------------------------------------------------------
+; Introduction
+; CNS difficulty: basic
+; CNS ƒŒƒxƒ‹: Šî–{
+[Statedef 191]
+type = S
+ctrl = 0
+anim = 190
+velset = 0,0
+
+[State 191, 1] ;Freeze animation until PreIntro is over
+type = ChangeAnim
+trigger1 = RoundState = 0
+value = 190
+
+[State 191, 2] ;Assert this until you want "round 1, fight" to begin
+type = AssertSpecial
+trigger1 = 1
+flag = Intro
+
+[State 191, 3] ;Change to stand state when done
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+
+[State 191, Wood 1]
+type = Explod
+trigger1 = RoundState != 0
+persistent = 0
+anim = 191
+postype = p1
+pos = 260, -90
+velocity = -4.2, -7
+accel = 0, .32
+removetime = 48
+
+[State 191, Wood 2]
+type = Explod
+trigger1 = AnimElemTime(7) = 1
+anim = 192
+postype = p1
+pos = 60, -70
+velocity = 2, -4
+accel = 0, .32
+removetime = 35
+
+[State 191, Snd 1]
+type = PlaySnd
+trigger1 = AnimElem = 7
+value = F5,2
+volume = -40
+
+[State 191, Snd 2]
+type = PlaySnd
+trigger1 = AnimElemTime(7) = 3
+value = F5,3
+volume = -80
+
+;---------------------------------------------------------------------------
+; Taunt
+; CNS difficulty: easy
+[Statedef 195]
+type = S
+ctrl = 0
+anim = 195
+velset = 0,0
+movetype = I
+physics = S
+sprpriority = 2
+
+[State 195, 1]
+type = CtrlSet
+trigger1 = Time = 40
+value = 1
+
+[State 195, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1

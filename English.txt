@@ -1,0 +1,102 @@
+Name:Tios
+Version:1.0
+
+http://mugen-restaurant.jp/
+
+intro---------------------------------------
+
+Thank you for your downloading my character!
+
+Tios is my first original character for MUGEN.
+He is magician boy who can fight with his magic-skills.
+
+his Profile
+  Age: 11years and 7months
+  Sex: male
+  Birth: february 20
+  Height: 147cm
+  Weight: 41.1kg
+  Important: family,friends
+  Favorit food: gratin, pumpkin soup, ANKIMO
+  Likes; fairy tale,animals,dolls
+  Dislike: bully
+  Having Dream: fairy tale writer
+
+
+If you want AI and Voice,you can download
+ AI patch and voice patch at character page.
+
+This character is free to convert,and free to host it.
+(though I cant support them)
+
+
+basic move----------------------------------------
+
+ x weak Punch
+ y strong Punch
+ a weak Kick
+ b strong Kick
+
+* can use chain combo.
+ most of normal moves Can be canceled
+  "punch>kick"and "weak>strong"
+
+ 66 for front step
+ 44 for back step
+  step can use as movecontact from some normal attack.
+
+ at the end of steps,special arts command can be imputed.
+ it effect faster than usual.
+
+*airjump
+ he can jump once more in air.
+ but at the second jump,he can not use air-guard.
+
+special move---------------------------------------
+ this number at command is dirrection of "numeric keypad"
+
+ *29 High Jump
+
+ *6+a sliding
+  It can be used at the end of front step,and it will be
+  more effective.
+
+special attack--------------------------------------
+
+ *x+a(near by enemy) Throw
+
+ *236x/y Pigeon Card
+   He throw a card.after that the card change to pigeon.
+   pigeon can not be air guard.
+
+ *236x/y(in the air) Rabit Card
+   card change to rabit when it hit the ground.
+
+ *623x/y Star Stairs
+   Anti-air move,having small invincible time.
+   First hit can not be guard in air.
+
+ *214x/y Surprising Gift
+   In the air,various Items will appear.and fall against enemy's head.
+
+ *236a/b Dimension Trip
+   Bunish at ground and appear in the air.
+   after appearing,he can do many move in air.
+   but can not air guard.
+
+ *214a/b RuminouStep
+   Step and hit with his stick.
+   this move can dodge projectiles.
+   when it hit when enemy air,enemy float virtically,so easy to pursuitchase.
+
+ *214a/b(in the air) Aurora Slide
+   He slide down diagonally and kick enemy.
+
+super attack--------------------------------------
+
+ *236236x/y(use 1 gauge) Rainbow Sprash
+   Throw the water ball.when this ball hit ground,the fountain willappear.
+
+
+------------------------------------------------------
+thank you for your playing!

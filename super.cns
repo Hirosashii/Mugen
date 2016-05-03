@@ -1,0 +1,1112 @@
+;--------------------------------------------------------------------------
+[Statedef 3000]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+velset = 0,0
+anim = 3000
+ctrl = 0
+sprpriority = 1
+
+[State 3000,1]
+type = helper
+trigger1 = time = 13
+name = "helper3010"
+id = 3010
+pos = 0,0
+postype = p1
+stateno = 3010
+helpertype = normal
+ownpal = 1
+keyctrl = 1
+
+[State 3000, 0]
+type = SuperPause
+trigger1 = time = 10
+time = 14
+movetime = 1
+pos = -34, -95
+darken = 1
+anim = 100
+sound = s3000, 0
+poweradd = -1000
+
+[State 3000, 0]
+type = NotHitBy
+trigger1 = time > 10
+trigger1 = time < 20
+value = SCA
+time = 1
+
+[State 3000, 7]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+;---------------------------------------------------------------------------
+[Statedef 3005];‹­
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+velset = 0,0
+anim = 3000
+ctrl = 0
+sprpriority = 1
+
+[State 3005,1]
+type = helper
+trigger1 = time = 13
+name = "helper3015"
+id = 3015
+pos = 0,0
+postype = p1
+stateno = 3015
+helpertype = normal
+ownpal = 1
+keyctrl = 1
+
+[State 3005, 0]
+type = SuperPause
+trigger1 = time = 10
+time = 14
+movetime = 1
+pos = -34, -95
+;pos = 10, -61
+darken = 1
+anim = 100
+sound = s3000, 0
+poweradd = -1000
+
+[State 3000, 0]
+type = NotHitBy
+trigger1 = time > 10
+trigger1 = time < 20
+value = SCA
+time = 1
+
+[State 3005, 7]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+;---------------------------------------------------------------------------
+[Statedef 3010];ƒwƒ‹ƒp[
+type = S
+movetype= I
+physics = N
+anim = 3010
+velset = 0,0
+ctrl = 0
+sprpriority = 2
+
+[State 3010, 3]
+type = BindToParent
+trigger1 = time < 12
+time = 1
+pos = -33,-105
+
+[State 3010, 3]
+type = BindToParent
+trigger1 = time = 12
+time = 1
+pos = -37,-105
+
+[State 3010, 3]
+type = BindToParent
+trigger1 = time = 13
+time = 1
+pos = -40,-103
+
+[State 3010, 0]
+type = Velset
+trigger1 = time = 14
+x = 11.5
+y = 1
+
+[State 3010, 0]
+type = Veladd
+trigger1 = 1
+y = 1.8
+
+[State 3010, 0]
+type = ChangeState
+trigger1 = parent,movetype = H
+trigger1 = time < 20
+value = 3060
+
+[State 3010, 0]
+type = ChangeState
+trigger1 = Pos Y > 0
+value = 3020
+
+
+
+;---------------------------------------------------------------------------
+[Statedef 3015];ƒwƒ‹ƒp[
+type = S
+movetype= I
+physics = N
+anim = 3010
+velset = 0,0
+ctrl = 0
+sprpriority = 2
+
+[State 3015, 3]
+type = BindToParent
+trigger1 = time < 12
+time = 1
+pos = -33,-105
+
+[State 3015, 3]
+type = BindToParent
+trigger1 = time = 12
+time = 1
+pos = -37,-105
+
+[State 3015, 3]
+type = BindToParent
+trigger1 = time = 13
+time = 1
+pos = -40,-103
+
+[State 3015, 0]
+type = Velset
+trigger1 = time = 14
+x = 15.5
+y = 1
+
+[State 3015, 0]
+type = Veladd
+trigger1 = 1
+y = 1.8
+
+[State 3010, 0]
+type = ChangeState
+trigger1 = parent,movetype = H
+trigger1 = time < 20
+value = 3060
+
+[State 3015, 0]
+type = ChangeState
+trigger1 = Pos Y > 0
+value = 3020
+
+;---------------------------------------------------------------------------
+[Statedef 3020];ƒwƒ‹ƒp[Ú’n
+type = S
+movetype= A
+physics = N
+anim = 999
+velset = 0,0
+ctrl = 0
+sprpriority = 1
+
+[State 3100, 3]
+type = EnvShake
+trigger1 = Time = 0
+time = 35
+freq = 120
+ampl = 6
+
+[State 3050, 0]
+type = Playsnd
+trigger1 = time = 1
+value = 3000,1
+
+[State 3050, 0]
+type = Posset
+trigger1 = 1
+y = 4
+
+[State 3020, 0]
+type = Velset
+trigger1 = 1
+x = 0
+y = 0
+
+[State 3020, explod];Ú’nƒAƒjƒ
+type = Explod
+trigger1 = time = 0
+;persistent = 0
+anim = 3011
+postype = p1
+pos = 0, 0
+velocity = 0, 0
+sprpriority = 2
+
+[State 3020, explod];…‚µ‚Ô‚«ƒAƒjƒ
+type = Explod
+trigger1 = time = 1
+trigger2 = time = 17
+trigger3 = time = 34
+trigger4 = time = 51
+;trigger5 = time = 68
+;persistent = 0
+anim = 3020
+postype = p1
+pos = 0, 0
+velocity = 0, 0
+sprpriority = 4
+
+[State 3020, explod];‚«ã‚ª‚é
+type = Explod
+trigger1 = time = 4
+;persistent = 0
+anim = 3030
+id = 3030
+postype = p1
+pos = 0, 0
+velocity = 0, 0
+sprpriority = 4
+ignorehitpause = 1
+
+[State 3020, explod]
+type = ModifyExplod
+trigger1 = time >= 0
+ID = 3030
+trans = AddAlpha
+alpha = 255,35
+;palfx.time = 15
+;palfx.color = 6
+;palfx.invertall = 1
+;palfx.add = 250,-25,35
+;palfx.sinadd = 35,35,35,8
+;snap = 16, -3
+
+[State 3020 , 1]
+type = Projectile
+trigger1 = time = 4
+ProjAnim = 3060
+ProjID = 3060
+projremove = 0
+offset = 0,0
+velocity = 0, 0
+accel = 0, 0
+hitflag = MA
+guardflag = M
+attr = S, SP
+projremovetime = 2
+damage = 25,8
+animtype = Hard
+getpower = 0
+givepower = 50
+pausetime = 11,11
+guard.ctrltime = 14
+sparkno = 2
+hitsound = -1,0
+guardsound = s1,2
+ground.type = high
+ground.slidetime = 29
+ground.hittime = 29
+ground.velocity = -2,-6.5
+guard.velocity = -5.2
+airguard.velocity = -2.0,-5.0
+air.velocity = -2,-6.5
+
+[State 3020 , 1]
+type = Projectile
+trigger1 = time = 8
+ProjAnim = 3061
+ProjID = 3060
+projremove = 0
+offset = 0,0
+velocity = 0, 0
+accel = 0, 0
+hitflag = MA
+guardflag = M
+attr = S, SP
+projremovetime = 2
+damage = 25,8
+animtype = Hard
+getpower = 0
+givepower = 50
+pausetime = 11,11
+guard.ctrltime = 14
+sparkno = 2
+hitsound = -1,0
+guardsound = s1,2
+ground.type = high
+ground.slidetime = 29
+ground.hittime = 29
+ground.velocity = -2,-6.5
+guard.velocity = -5.2
+airguard.velocity = -2.0,-5.0
+air.velocity = -2,-6.5
+
+[State 3020 , 1]
+type = Projectile
+trigger1 = time = 14
+trigger2 = time = 18
+trigger3 = time = 22
+trigger4 = time = 26
+ProjAnim = 3062
+ProjID = 3060
+projremove = 0
+offset = 0,0
+velocity = 0, 0
+accel = 0, 0
+hitflag = MA
+guardflag = M
+attr = S, SP
+projremovetime = 2
+damage = 25,8
+animtype = Hard
+getpower = 0
+givepower = 50
+pausetime = 11,11
+guard.ctrltime = 14
+sparkno = 2
+hitsound = -1,0
+guardsound = s1,2
+ground.type = high
+ground.slidetime = 29
+ground.hittime = 29
+ground.velocity = -2,-6.5
+guard.velocity = -5.2
+airguard.velocity = -2.0,-5.0
+air.velocity = -2,-6.5
+
+[State 3020 , 1]
+type = Projectile
+trigger1 = time = 26
+ProjAnim = 3062
+ProjID = 3060
+projremove = 0
+offset = 0,0
+velocity = 0, 0
+accel = 0, 0
+hitflag = MA
+guardflag = M
+attr = S, SP
+projremovetime = 2
+damage = 35,8
+animtype = diagup
+getpower = 0
+givepower = 50
+pausetime = 0,8
+guard.ctrltime = 14
+sparkno = 2
+hitsound = -1,0
+guardsound = s1,2
+ground.type = high
+ground.slidetime = 29
+ground.hittime = 29
+ground.velocity = -2,-6.5
+guard.velocity = -5.2
+airguard.velocity = -2.0,-5.0
+air.velocity = -2,-6.5
+fall = 1
+fall.recover = 0
+fall.recovertime = 900
+
+[State 3020,1];ƒwƒ‹ƒp[‚Ìƒwƒ‹ƒp[
+type = helper
+trigger1 = time = 28
+name = "helper3040"
+id = 3040
+pos = 0,-150
+postype = p1
+stateno = 3040
+helpertype = normal
+ownpal = 1
+keyctrl = 1
+size.xscale = 1
+size.yscale = 1.2
+
+[State 3010, 3]
+type = DestroySelf
+trigger1 = time = 100
+
+
+;---------------------------------------------------------------------------
+[Statedef 3040];ƒwƒ‹ƒp[
+type = S
+movetype= I
+physics = N
+anim = 3040
+velset = 0,0
+ctrl = 0
+sprpriority = 4
+
+[State 3040, 3]
+type = BindToParent
+trigger1 = time = 0
+time = 1
+pos = 0,-125
+
+[State 3040, 0]
+type = Velset
+trigger1 = time = 0
+y = 5
+
+[State 3040, 0]
+type = Veladd
+trigger1 = 1
+y = 0.4
+
+[State 3040, 0]
+type = ChangeState
+trigger1 = Pos Y > 0
+value = 3050
+
+
+;---------------------------------------------------------------------------
+[Statedef 3050];ƒwƒ‹ƒp[…‚µ‚Ô‚«Ú’n
+type = S
+movetype= A
+physics = N
+anim = 3050
+velset = 0,0
+ctrl = 0
+sprpriority = 4
+
+[State 3050, 0]
+type = Posset
+trigger1 = 1
+y = 4
+
+[State 3050, 0]
+type = Velset
+trigger1 = 1
+x = 0
+y = 0
+
+[State 3010, 3]
+type = DestroySelf
+trigger1 = Animtime = 0
+
+
+
+;---------------------------------------------------------------------------
+[Statedef 3060];ƒwƒ‹ƒp[
+type = S
+movetype= I
+physics = N
+anim = 3010
+velset = 0,0
+ctrl = 0
+sprpriority = 2
+
+[State 3010, 0]
+type = null;Velset
+trigger1 = time = 14
+x = 11.5
+y = 1
+
+[State 3010, 0]
+type = Veladd
+trigger1 = 1
+y = 1.8
+
+[State 3010, 0]
+type = ChangeState
+trigger1 = Pos Y > 0
+value = 3050
+
+
+;---------------------------------------------------------------------------
+[Statedef 3100]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+velset = 0,0
+anim = 3100
+ctrl = 0
+sprpriority = 1
+
+[State 3110, explod]
+type = Explod
+trigger1 = time = 4
+;persistent = 0
+anim = 3110
+id = 3110
+postype = left
+pos = -40, 0
+velocity = 0, 0
+sprpriority = 0
+ignorehitpause = 1
+
+
+[State 3000, 0]
+type = null;SuperPause
+trigger1 = time = 10
+time = 14
+movetime = 1
+pos = -34, -95
+darken = 1
+anim = 100
+sound = s3000, 0
+poweradd = -1000
+
+[State 3000, 0]
+type = NotHitBy
+trigger1 = time > 10
+trigger1 = time < 20
+value = SCA
+time = 1
+
+[State 3005,1]
+type = helper
+trigger1 = time = 18
+name = "helper3120"
+id = 3120
+pos = 0,-260
+postype = back
+stateno = 3120
+helpertype = normal
+ownpal = 1
+keyctrl = 1
+
+[State 3005,1]
+type = helper
+trigger1 = time = 23
+name = "helper3130"
+id = 3130
+pos = 30,-260
+postype = back
+stateno = 3130
+helpertype = normal
+ownpal = 1
+keyctrl = 1
+
+[State 3005,1]
+type = helper
+trigger1 = time = 28
+name = "helper3140"
+id = 3140
+pos = -30,-260
+postype = back
+stateno = 3140
+helpertype = normal
+ownpal = 1
+keyctrl = 1
+
+[State 3005,1]
+type = helper
+trigger1 = time = 32
+name = "helper3150"
+id = 3150
+pos = -20,-260
+postype = back
+stateno = 3150
+helpertype = normal
+ownpal = 1
+keyctrl = 1
+
+
+[State 3000, 7]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+;---------------------------------------------------------------------------
+[Statedef 3120];¯
+type = S
+movetype= A
+physics = N
+anim = 3120
+velset = 0,0
+ctrl = 0
+sprpriority = 2
+
+[State 1000,0]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1000, 3]
+type = Varadd
+trigger1 = 1
+v = 31
+value = 15
+
+[State 1010, 3];Šp“x
+type = AngleSet
+trigger1 = time = 1
+value = 1
+
+[state 1010, 3];Šp“x
+type = angledraw
+trigger1 = 1
+value = -1-var(31)
+scale = 1,1
+
+[state 1000, 3]
+type = angleadd
+trigger1 = 1
+
+[State 1010, 0]
+type = Velset
+trigger1 = time = 0
+x = 11
+y = 11
+
+[State 1010, 2]
+type = HitDef
+trigger1 = time > 16
+attr = S, SP
+damage = 31
+guardflag = MA
+priority = 3
+pausetime = 12,12
+sparkno = s10000
+sparkxy = 0,0
+hitsound   = s1,0
+guardsound = s1,2
+ground.type = High
+ground.slidetime = 23
+ground.hittime  = 23
+ground.velocity = -4
+air.velocity = -2,-3
+
+[State 700,end]
+type = ChangeState
+trigger1 = movecontact
+value = 1011
+
+[State 700,end]
+type = ChangeState
+trigger1 = Pos Y > 0
+value = 3121
+
+[State 700,end]
+type = Destroyself
+trigger1 = Pos Y > 20
+
+
+;---------------------------------------------------------------------------
+[Statedef 3121];¯
+type = S
+movetype= A
+physics = N
+anim = 3120
+ctrl = 0
+sprpriority = 2
+
+[State 1000,0]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1000, 3]
+type = Varadd
+trigger1 = 1
+v = 31
+value = 15
+
+[State 1010, 3];Šp“x
+type = AngleSet
+trigger1 = time = 1
+value = 1
+
+[state 1010, 3];Šp“x
+type = angledraw
+trigger1 = 1
+value = -1-var(31)
+scale = 1,1
+
+[state 1000, 3]
+type = angleadd
+trigger1 = 1
+
+[State 1010, 0]
+type = Velset
+trigger1 = time = 0
+x = 2
+y = -5
+
+[State 1010, 0]
+type = Veladd
+trigger1 = 1
+y = .3
+
+[State 700,end]
+type = Destroyself
+trigger1 = Pos Y > 20
+
+
+;---------------------------------------------------------------------------
+[Statedef 3130];¯
+type = S
+movetype= A
+physics = N
+anim = 3121
+velset = 0,0
+ctrl = 0
+sprpriority = 2
+
+[State 1000,0]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1000, 3]
+type = Varadd
+trigger1 = 1
+v = 31
+value = 15
+
+[State 1010, 3];Šp“x
+type = AngleSet
+trigger1 = time = 1
+value = 1
+
+[state 1010, 3];Šp“x
+type = angledraw
+trigger1 = 1
+value = -1-var(31)
+scale = 1,1
+
+[state 1000, 3]
+type = angleadd
+trigger1 = 1
+
+[State 1010, 0]
+type = Velset
+trigger1 = time = 0
+x = 11
+y = 11
+
+[State 1010, 2]
+type = HitDef
+trigger1 = time > 16
+attr = S, SP
+damage = 31
+guardflag = MA
+priority = 3
+pausetime = 12,12
+sparkno = s10000
+sparkxy = 0,0
+hitsound   = s1,0
+guardsound = s1,2
+ground.type = High
+ground.slidetime = 23
+ground.hittime  = 23
+ground.velocity = -4
+air.velocity = -2,-3
+
+[State 700,end]
+type = ChangeState
+trigger1 = movecontact
+value = 1011
+
+[State 700,end]
+type = ChangeState
+trigger1 = Pos Y > 0
+value = 3131
+
+[State 700,end]
+type = Destroyself
+trigger1 = Pos Y > 20
+
+
+;---------------------------------------------------------------------------
+[Statedef 3131];¯
+type = S
+movetype= A
+physics = N
+anim = 3121
+ctrl = 0
+sprpriority = 2
+
+[State 1000,0]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1000, 3]
+type = Varadd
+trigger1 = 1
+v = 31
+value = 15
+
+[State 1010, 3];Šp“x
+type = AngleSet
+trigger1 = time = 1
+value = 1
+
+[state 1010, 3];Šp“x
+type = angledraw
+trigger1 = 1
+value = -1-var(31)
+scale = 1,1
+
+[state 1000, 3]
+type = angleadd
+trigger1 = 1
+
+[State 1010, 0]
+type = Velset
+trigger1 = time = 0
+x = 2
+y = -5
+
+[State 1010, 0]
+type = Veladd
+trigger1 = 1
+y = .3
+
+[State 700,end]
+type = Destroyself
+trigger1 = Pos Y > 20
+
+
+;---------------------------------------------------------------------------
+[Statedef 3140];¯
+type = S
+movetype= A
+physics = N
+anim = 3121
+velset = 0,0
+ctrl = 0
+sprpriority = 2
+
+[State 1000,0]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1000, 3]
+type = Varadd
+trigger1 = 1
+v = 31
+value = 15
+
+[State 1010, 3];Šp“x
+type = AngleSet
+trigger1 = time = 1
+value = 1
+
+[state 1010, 3];Šp“x
+type = angledraw
+trigger1 = 1
+value = -1-var(31)
+scale = 1,1
+
+[state 1000, 3]
+type = angleadd
+trigger1 = 1
+
+[State 1010, 0]
+type = Velset
+trigger1 = time = 0
+x = 11
+y = 11
+
+[State 1010, 2]
+type = HitDef
+trigger1 = time > 16
+attr = S, SP
+damage = 31
+guardflag = MA
+priority = 3
+pausetime = 12,12
+sparkno = s10000
+sparkxy = 0,0
+hitsound   = s1,0
+guardsound = s1,2
+ground.type = High
+ground.slidetime = 23
+ground.hittime  = 23
+ground.velocity = -4
+air.velocity = -2,-3
+
+[State 700,end]
+type = ChangeState
+trigger1 = movecontact
+value = 3141
+
+[State 700,end]
+type = ChangeState
+trigger1 = Pos Y > 0
+value = 3141
+
+[State 700,end]
+type = Destroyself
+trigger1 = Pos Y > 20
+
+
+;---------------------------------------------------------------------------
+[Statedef 3141];¯
+type = S
+movetype= A
+physics = N
+anim = 3122
+ctrl = 0
+sprpriority = 2
+
+[State 1000,0]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1000, 3]
+type = Varadd
+trigger1 = 1
+v = 31
+value = 15
+
+[State 1010, 3];Šp“x
+type = AngleSet
+trigger1 = time = 1
+value = 1
+
+[state 1010, 3];Šp“x
+type = angledraw
+trigger1 = 1
+value = -1-var(31)
+scale = 1,1
+
+[state 1000, 3]
+type = angleadd
+trigger1 = 1
+
+[State 1010, 0]
+type = Velset
+trigger1 = time = 0
+x = 2
+y = -5
+
+[State 1010, 0]
+type = Veladd
+trigger1 = 1
+y = .3
+
+[State 700,end]
+type = Destroyself
+trigger1 = Pos Y > 20
+
+
+;---------------------------------------------------------------------------
+[Statedef 3150];¯
+type = S
+movetype= A
+physics = N
+anim = 3123
+velset = 0,0
+ctrl = 0
+sprpriority = 2
+
+[State 1000,0]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1000, 3]
+type = Varadd
+trigger1 = 1
+v = 31
+value = 15
+
+[State 1010, 3];Šp“x
+type = AngleSet
+trigger1 = time = 1
+value = 1
+
+[state 1010, 3];Šp“x
+type = angledraw
+trigger1 = 1
+value = -1-var(31)
+scale = 1,1
+
+[state 1000, 3]
+type = angleadd
+trigger1 = 1
+
+[State 1010, 0]
+type = Velset
+trigger1 = time = 0
+x = 11
+y = 11
+
+[State 1010, 2]
+type = HitDef
+trigger1 = time > 16
+attr = S, SP
+damage = 31
+guardflag = MA
+priority = 3
+pausetime = 12,12
+sparkno = s10000
+sparkxy = 0,0
+hitsound   = s1,0
+guardsound = s1,2
+ground.type = High
+ground.slidetime = 23
+ground.hittime  = 23
+ground.velocity = -4
+air.velocity = -2,-3
+
+[State 700,end]
+type = ChangeState
+trigger1 = movecontact
+value = 3151
+
+[State 700,end]
+type = ChangeState
+trigger1 = Pos Y > 0
+value = 3151
+
+[State 700,end]
+type = Destroyself
+trigger1 = Pos Y > 20
+
+
+;---------------------------------------------------------------------------
+[Statedef 3151];¯
+type = S
+movetype= A
+physics = N
+anim = 3123
+ctrl = 0
+sprpriority = 2
+
+[State 1000,0]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 1000, 3]
+type = Varadd
+trigger1 = 1
+v = 31
+value = 15
+
+[State 1010, 3];Šp“x
+type = AngleSet
+trigger1 = time = 1
+value = 1
+
+[state 1010, 3];Šp“x
+type = angledraw
+trigger1 = 1
+value = -1-var(31)
+scale = 1,1
+
+[state 1000, 3]
+type = angleadd
+trigger1 = 1
+
+[State 1010, 0]
+type = Velset
+trigger1 = time = 0
+x = 2
+y = -5
+
+[State 1010, 0]
+type = Veladd
+trigger1 = 1
+y = .3
+
+[State 700,end]
+type = Destroyself
+trigger1 = Pos Y > 20

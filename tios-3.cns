@@ -1,0 +1,339 @@
+
+
+;---------------------------------------------------------------------------
+; States that are always executed (use statedef -2)
+;---------------------------------------------------------------------------
+[Statedef -3]
+
+;----AI(デフォルトAI)の強さ---------------
+;----AI difficulty -----------------------
+
+[State 60, 0]
+type = VarSet
+trigger1 = time = 1
+var(18) = 3
+
+;　0　AIなし
+;　1　弱い
+;　2　普通
+;　3　強い
+;　4　強い(超反応など)
+
+;----着地にて空Ｊ回数リセット---------------
+[State 60, 0]
+type = VarSet
+trigger1 = var(18) = 0
+trigger1 = var(20) = 1
+var(20) = 0
+
+
+;----着地にて空Ｊ回数リセット---------------
+[State 60, 0]
+type = VarSet
+trigger1 = stateno = 52
+trigger2 = StateType != A
+trigger3 = StateNo = 40
+trigger4 = StateNo = 115
+var(26) = 0
+
+[State 60, 0]
+type = VarSet
+trigger1 = stateno != 50
+var(23) = 0
+
+;----着地にて空Ｊ回数リセット修正前---------------
+[State 60, 0]
+type = null;VarSet
+trigger1 = stateno != 60
+trigger1 = stateno != 61
+var(26) = 0
+
+;----ダウンおきあがり絵---------------
+[State -2, 0]
+type = VarSet
+trigger1 = Anim = 5161
+trigger2 = Anim = 5162
+trigger3 = Anim = 5171
+trigger4 = Anim = 5172
+trigger5 = Anim = 5111
+trigger6 = Anim = 5112
+v = 25
+value = 1
+
+[State -2, 0]
+type = VarSet
+trigger1 = Anim = 5160
+trigger2 = Anim = 5160
+trigger3 = Anim = 5170
+trigger4 = Anim = 5170
+trigger5 = Anim = 5110
+trigger6 = Anim = 5110
+v = 25
+value = 0
+
+[State -2,0]
+type = RemoveExplod
+trigger1 = stateno != 610
+id = 615
+
+;----崩れＫＯ---------------
+[State -2, 0]
+type = SelfState
+triggerall = Pos Y >= -5
+triggerall = PrevStateno != 5110
+triggerall = PrevStateno != 5050
+triggerall = HitShakeOver = 0
+triggerall = life = 0
+trigger1 = Enemy,stateno = 200||Enemy,stateno = 400||Enemy,stateno = 600
+trigger2 = Enemy,stateno = 230||Enemy,stateno = 430||Enemy,stateno = 630
+value = 5130
+
+[State -2, 0]
+type = SelfState
+triggerall = life = 0
+triggerall = ((prevstateno=120||prevstateno=140)&&Pos Y>=0) || (prevstateno = [130,131]) || prevstateno = [150,153]
+trigger1 = Stateno = [5000,5050]
+trigger1 = GetHitVar(damage) < 30
+trigger1 = enemy,HitDefAttr = SCA,SA,ST,SP
+trigger2 = enemy,HitDefAttr = SCA,HA,HT,HP
+;trigger3 = enemy,HitDefAttr = SCA
+value = 5130
+
+[State 5130, 0]
+type = VarSet
+trigger1 = Anim = 5950
+v = 24
+value = 1
+
+[State 5130, 0]
+type = VarSet
+trigger1 = Anim != 5950
+trigger1 = Stateno != 5130
+trigger1 = Stateno != 5131
+trigger1 = Stateno != 5110
+trigger1 = Stateno != 5150
+v = 24
+value = 0
+
+;----カード連続制限---------------
+[State 1000, 3]
+type = Varadd
+trigger1 = var(32) > 0
+v = 32
+value = -1
+
+[State 1000, 3]
+type = Varset
+trigger1 = movetype = H
+v = 32
+value = 0
+
+[State 1000, 3]
+type = Varadd
+trigger1 = var(34) > 0
+v = 34
+value = -1
+
+;-----ダウン時のステッキ----------
+[State -2, 0]
+type = helper
+trigger1 = stateno = 5100
+trigger1 = Anim = 5100
+trigger1 = Numhelper(90) = 0
+trigger2 = stateno = 5110
+trigger2 = Anim = 5170
+trigger2 = Numhelper(90) = 0
+name = "helper90"
+id = 90
+pos = -10,-10
+postype = p1
+stateno = 90
+helpertype = normal
+ownpal = 1
+keyctrl = 1
+
+[State -2, 0]
+type = helper
+trigger1 = stateno = 5030
+trigger1 = Anim = 5051
+trigger1 = Numhelper(90) = 0
+trigger2 = stateno = 5100
+trigger2 = Anim = 5101
+trigger2 = Numhelper(90) = 0
+name = "helper90"
+id = 90
+pos = 10,-50
+postype = p1
+stateno = 93
+helpertype = normal
+ownpal = 1
+keyctrl = 1
+
+[State -2, 0]
+type = helper
+trigger1 = stateno = 5030
+trigger1 = Anim = 5052
+trigger1 = Numhelper(90) = 0
+trigger2 = stateno = 5100
+trigger2 = Anim = 5102
+trigger2 = Numhelper(90) = 0
+name = "helper90"
+id = 90
+pos = 10,-50
+postype = p1
+stateno = 93
+helpertype = normal
+ownpal = 1
+keyctrl = 1
+
+[State -3, Landing Sound]
+type = Explod
+trigger1 = Anim = 5110
+trigger1 = Animelem = 3
+;persistent = 0
+anim = 710
+postype = p1
+pos = -26, -14
+scale = 0.8,0.8
+velocity = 0,-0.3
+sprpriority = 3
+trans = AddAlpha
+alpha = 205,185
+
+[State -3, Landing Sound]
+type = Explod
+trigger1 = Anim = 5111
+trigger1 = Animelem = 5
+trigger2 = Anim = 5112
+trigger2 = Animelem = 5
+;persistent = 0
+anim = 711
+postype = p1
+pos = 21, 2
+scale = 0.8,0.8
+velocity = 0,0.1
+sprpriority = 3
+trans = AddAlpha
+alpha = 205,185
+
+;----キャラクターの画面端に対する幅---------------
+[State -3,0];めくり易く、めくられ易く
+type = Width
+trigger1 = stateno = [5030,5200]
+;trigger1 = stateno != 1210
+;trigger1 = stateno != 1200
+;trigger1 = stateno != 1205
+;trigger1 = stateno != 130
+;trigger1 = stateno != 150
+;trigger1 = stateno != 151
+;trigger1 = stateno != 152
+edge = -1,15
+
+[State -3,0];めくり易く、めくられ易く
+type = Width
+trigger1 = stateno = [5000,5030]
+edge = -1,0
+
+[State -3,0];めくり易く、めくられ易く
+type = null;Width
+trigger1 = stateno = [600,650]
+edge = -1,5
+
+;-----AIのランダム行動用----------
+[State -3, 0]
+type = VarRandom
+trigger1 = time = 1
+trigger1 = stateno != [120,150]
+v = 21
+range = 0,5
+
+;-----ガードクラッシュ(未)----------
+
+;ガードクラッシュゲージ
+[State -2,会心ゲージ変化]
+type = null;explod
+triggerall = numexplod(8070) = 0
+trigger1 = !(TeamMode = simul)
+Anim = 8070
+Id = 8070
+postype = left
+pos = Ifelse((TeamSide=1),6,310),51
+ontop = 1
+pausemovetime = 9999999999999
+supermovetime = 9999999999999
+scale = 0.5,0.5;*(var(35)/200.0)
+shadow = 0,0,0
+ignorehitpause = 1
+[State -2,会心ゲージ変化]
+type = null;modifyexplod
+triggerall = numexplod(8070) = 1
+trigger1 = !(TeamMode = simul)
+Anim = 8070
+Id = 8070
+postype = left
+pos = Ifelse((TeamSide=1),6,310),51
+ontop = 1
+pausemovetime = 9999999999999
+supermovetime = 9999999999999
+scale = 0.5,0.5;*(var(35)/200.0)
+shadow = 0,0,0
+ignorehitpause = 1
+
+;ガードクラッシュゲージ
+[State -2,会心ゲージ変化]
+type = null;explod
+triggerall = numexplod(8071) = 0
+trigger1 = !(TeamMode = simul)
+Anim = 8071
+Id = 8071
+postype = left
+pos = Ifelse((TeamSide=1),6,310),51
+ontop = 1
+pausemovetime = 9999999999999
+supermovetime = 9999999999999
+scale = 0.5,0.5-0.5*(var(35)/200.0)
+shadow = 0,0,0
+ignorehitpause = 1
+[State -2,会心ゲージ変化]
+type = null;modifyexplod
+triggerall = numexplod(8071) = 1
+trigger1 = !(TeamMode = simul)
+Anim = 8071
+Id = 8071
+postype = left
+pos = Ifelse((TeamSide=1),6,310),51
+ontop = 1
+pausemovetime = 9999999999999
+supermovetime = 9999999999999
+scale = 0.5,0.5-0.5*(var(35)/200.0)
+shadow = 0,0,0
+ignorehitpause = 1
+
+[State -2,ゲージ枠]
+type = null;explod
+triggerall = numexplod(8072) = 0
+trigger1 = !(TeamMode = simul)
+Anim = 8072
+Id = 8072
+postype = left
+pos = Ifelse((TeamSide=1),6,310),51
+ontop = 1
+pausemovetime = 9999999999999
+supermovetime = 9999999999999
+scale = 0.5,0.5
+shadow = 0,0,0
+ignorehitpause = 1
+[State -2,ゲージ枠]
+type = null;modifyexplod
+triggerall = numexplod(8072) = 1
+trigger1 = !(TeamMode = simul)
+Anim = 8072
+Id = 8072
+postype = left
+pos = Ifelse((TeamSide=1),6,310),51
+ontop = 1
+pausemovetime = 9999999999999
+supermovetime = 9999999999999
+scale = 0.5,0.5
+shadow = 0,0,0
+ignorehitpause = 1

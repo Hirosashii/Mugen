@@ -1,0 +1,1072 @@
+
+[Statedef -2]
+;voice
+;通常攻撃-----------------
+[State -3, 0];Random
+type = VarRandom
+triggerall = time = 1
+trigger1 = Stateno = [200,640]
+v = 38
+range = 0,3
+
+[State -2, 0];立ち弱としゃがみ弱
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Random < 500
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 200
+trigger2 = Stateno = 400
+trigger3 = Stateno = 230
+trigger4 = Stateno = 640
+value = 200,0
+volume = 255
+channel = 0
+
+[State -2, 0];立ち弱としゃがみ弱
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Random < 500
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 200
+trigger2 = Stateno = 400
+trigger3 = Stateno = 230
+trigger4 = Stateno = 640
+value = 200,1
+volume = 255
+channel = 0
+
+[State -2, 0];立ち弱としゃがみ弱
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Random < 500
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 200
+trigger2 = Stateno = 400
+trigger3 = Stateno = 230
+trigger4 = Stateno = 640
+value = 200,2
+volume = 255
+channel = 0
+
+[State -2, 0];立ち弱としゃがみ弱
+type = PlaySnd
+triggerall = var(38) = 3
+triggerall = Random < 500
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 200
+trigger2 = Stateno = 400
+trigger3 = Stateno = 230
+trigger4 = Stateno = 640
+value = 200,0
+volume = 255
+channel = 0
+
+
+[State -2, 0];ジャンプキック
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Random < 900
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 600
+value = 200,0
+volume = 255
+channel = 0
+
+[State -2, 0];ジャンプキック
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Random < 900
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 600
+value = 200,2
+volume = 255
+channel = 0
+
+[State -2, 0];ジャンプキック
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Random < 900
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 600
+value = 200,4
+volume = 255
+channel = 0
+
+;-----------------
+
+
+[State -2, 0];立ち中
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Random < 800
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 210
+value = 200, 0
+volume = 255
+channel = 0
+
+[State -2, 0];立ち中
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Random < 850
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 210
+value = 200, 1
+volume = 255
+channel = 0
+
+[State -2, 0];立ち中
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Random < 850
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 210
+value = 200, 4
+volume = 255
+channel = 0
+
+[State -2, 0];立ち中
+type = PlaySnd
+triggerall = var(38) = 3
+triggerall = Random < 800
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 210
+value = 200, 4
+volume = 255
+channel = 0
+
+[State -2, 0]
+type = PlaySnd
+triggerall = var(38) = 3
+triggerall = Random < 850
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 230
+value = 200, 0
+volume = 255
+channel = 0
+
+[State -2, 0]
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Random < 800
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 240
+value = 200, 0
+volume = 255
+channel = 0
+
+[State -2, 0]
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Random < 800
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 240
+value = 200, 1
+volume = 255
+channel = 0
+
+[State -2, 0]
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Random < 800
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 240
+value = 200, 4
+volume = 255
+channel = 0
+
+[State -2, 0]
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Random < 850
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 410
+value = 200, 12
+volume = 255
+channel = 0
+
+[State -2, 0]
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Random < 850
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 410
+value = 200, 12
+volume = 255
+channel = 0
+
+[State -2, 0]
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Random < 900
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 410
+value = 200, 12
+volume = 255
+channel = 0
+
+[State -2, 0];ジャンプ弱パン
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Random < 1000
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 600
+value = 200, 0
+volume = 255
+channel = 0
+
+[State -2, 0];ジャンプ弱パン
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Random < 1000
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 600
+value = 200, 1
+volume = 255
+channel = 0
+
+[State -2, 0];ジャンプ中パン
+type = PlaySnd
+triggerall = Random < 940
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 610
+value = 200, 12
+volume = 255
+channel = 0
+
+[State -2, 0];ジャンプ中K
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Random < 900
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 640
+value = 200, 0
+volume = 255
+channel = 0
+
+[State -2, 0];ジャンプ中K
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Random < 900
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 640
+value = 200, 1
+volume = 255
+channel = 0
+
+[State -2, 0];スライディング
+type = PlaySnd
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 651
+value = 200, 3
+volume = 255
+channel = 0
+
+[State -2, 0];スライディング
+type = PlaySnd
+triggerall = Time = 1
+triggerall = movetype != H
+trigger1 = Stateno = 652
+value = 200, 3
+volume = 255
+channel = 0
+
+
+;投げ-----------------
+[State -2, 0]
+type = PlaySnd
+triggerall = AnimElem = 4
+triggerall = movetype != H
+trigger1 = stateno = 800
+value = 200, 10
+volume = 255
+channel = 0
+
+[State -2, 0]
+type = PlaySnd
+triggerall = AnimElem = 7
+triggerall = movetype != H
+trigger1 = stateno = 810
+value = 600, 2
+volume = 255
+channel = 0
+
+;必殺技-----------------
+[State -2, 0];ギフト
+type = PlaySnd
+triggerall = AnimElem = 4
+triggerall = movetype != H
+trigger1 = Stateno = 1000
+trigger2 = Stateno = 1002
+value = 200, 13
+volume = 255
+channel = 0
+
+[State -2, 0];ハト
+type = PlaySnd
+triggerall = AnimElem = 4
+triggerall = movetype != H
+trigger1 = Stateno = 1100
+trigger2 = Stateno = 1110
+value = 200, 0
+volume = 255
+channel = 0
+
+[State -2, 0];ウサギ
+type = PlaySnd
+triggerall = AnimElem = 4
+triggerall = movetype != H
+trigger1 = Stateno = 1150
+trigger2 = Stateno = 1160
+value = 200, 1
+volume = 255
+channel = 0
+
+[State -2, 0];スター
+type = PlaySnd
+triggerall = movetype != H
+trigger1 = Stateno = 1300
+trigger1 = time = 1
+value = 200, 5
+volume = 255
+channel = 0
+
+[State -2, 0];ステップ
+type = PlaySnd
+triggerall = movetype != H
+triggerall = time = 1
+trigger1 = Stateno = 1410
+trigger2 = Stateno = 1460
+value = 200, 6
+volume = 255
+channel = 0
+
+[State -2, 0];オーロラ
+type = PlaySnd
+triggerall = time = 2
+triggerall = movetype != H
+trigger1 = Stateno = 1500
+value = 200, 7
+volume = 255
+channel = 0
+
+[State -2, 0];オーロラ
+type = PlaySnd
+triggerall = time = 5
+triggerall = movetype != H
+trigger1 = Stateno = 1510
+value = 200, 8
+volume = 255
+channel = 0
+
+[State -2, 0]
+type = PlaySnd
+triggerall = time = 11
+triggerall = movetype != H
+trigger1 = Stateno = 3000
+trigger2 = Stateno = 3005
+value = 200, 9
+volume = 255
+channel = 0
+
+;ダメージ-----------------
+[State -3, 0];Random
+type = VarRandom
+triggerall = time = 0
+triggerall = life != 0
+trigger1 = Stateno = 5000
+trigger2 = Stateno = 5010
+trigger3 = Stateno = 5020
+trigger4 = Stateno = 5070
+trigger5 = Stateno = 5080
+trigger6 = Stateno = 5100
+v = 38
+range = 0,4
+
+[State -2, 上やられ1]
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Time = 1
+trigger1 = Anim = 5000 || Anim = 5001 || Anim = 5002
+trigger2 = Anim = 5020 || Anim = 5021 || Anim = 5022
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<500),0,1)
+lowpriority = 1
+volume = 255
+
+[State -2, 上やられ2]
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Time = 1
+trigger1 = Anim = 5000 || Anim = 5001 || Anim = 5002
+trigger2 = Anim = 5020 || Anim = 5021 || Anim = 5022
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<300),2,4)
+lowpriority = 1
+volume = 255
+
+[State -2, 上やられ3]
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Time = 1
+trigger1 = Anim = 5000 || Anim = 5001 || Anim = 5002
+trigger2 = Anim = 5020 || Anim = 5021 || Anim = 5022
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<500),8,5)
+lowpriority = 1
+volume = 255
+
+[State -2, 上やられ4]
+type = PlaySnd
+triggerall = var(38) = 3
+triggerall = Time = 1
+trigger1 = Anim = 5000 || Anim = 5001 || Anim = 5002
+trigger2 = Anim = 5020 || Anim = 5021 || Anim = 5022
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<500),6,7)
+lowpriority = 1
+volume = 255
+
+[State -2, 上やられ4]
+type = PlaySnd
+triggerall = var(38) = 4
+triggerall = Time = 1
+trigger1 = Anim = 5000 || Anim = 5001 || Anim = 5002
+trigger2 = Anim = 5020 || Anim = 5021 || Anim = 5022
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<700),8,6)
+lowpriority = 1
+volume = 255
+
+[State -2, 下やられ1]
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Time = 1
+trigger1 = Anim = 5010 || Anim = 5011
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<500),2,5)
+lowpriority = 1
+volume = 255
+
+[State -2, 下やられ1]
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Time = 1
+trigger1 = Anim = 5012
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<500),2,3)
+lowpriority = 1
+volume = 255
+
+[State -2, 下やられ2]
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Time = 1
+trigger1 = Anim = 5010 || Anim = 5011
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<300),0,4)
+lowpriority = 1
+volume = 255
+
+[State -2, 下やられ2]
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Time = 1
+trigger1 = Anim = 5012
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<300),3,5)
+lowpriority = 1
+volume = 255
+
+[State -2, 下やられ3]
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Time = 1
+trigger1 = Anim = 5010 || Anim = 5011 || Anim = 5012
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<750),8,7)
+lowpriority = 1
+volume = 255
+
+[State -2, 下やられ4]
+type = PlaySnd
+triggerall = var(38) = 3
+triggerall = Time = 1
+trigger1 = Anim = 5010 || Anim = 5011 || Anim = 5012
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<500),3,6)
+lowpriority = 1
+volume = 255
+
+[State -2, 下やられ4]
+type = PlaySnd
+triggerall = var(38) = 4
+triggerall = Time = 1
+trigger1 = Anim = 5010 || Anim = 5011 || Anim = 5012
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<500),6,9)
+lowpriority = 1
+volume = 255
+
+
+
+[State -2, ダウンやられ1]
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Time = 1
+trigger1 = StateNo = 5080
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<500),0,2)
+lowpriority = 1
+volume = 255
+
+[State -2, ダウンやられ1]
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Time = 1
+trigger1 = StateNo = 5080
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<500),4,7)
+lowpriority = 1
+volume = 255
+
+[State -2, ダウンやられ1]
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Time = 1
+trigger1 = StateNo = 5080
+persistent = 10
+channel = 10
+value = 500,8
+lowpriority = 1
+volume = 255
+
+[State -2, ダウンやられ1]
+type = PlaySnd
+triggerall = var(38) = 3
+triggerall = Time = 1
+trigger1 = StateNo = 5080
+persistent = 20
+channel = 10
+value = 500,6
+lowpriority = 1
+volume = 255
+
+[State -2, ダウンやられ1]
+type = PlaySnd
+triggerall = var(38) = 4
+triggerall = Time = 1
+trigger1 = StateNo = 5080
+persistent = 20
+channel = 10
+value = 500,ifelse((Random<500),5,9)
+lowpriority = 1
+volume = 255
+
+[State -2, ころばされ]
+type = PlaySnd
+triggerall = Time = 1
+triggerall = life > 0
+trigger1 = Anim = 5070
+persistent = 0
+channel = 10
+value = 600,1
+lowpriority = 1
+volume = 255
+
+[State -2, 空中やられ0]
+type = PlaySnd
+;triggerall = var(38) = 0
+triggerall = Time = 1
+triggerall = life > 0
+trigger1 = Anim = 5052
+persistent = 0
+channel = 10
+value = 600,1
+lowpriority = 1
+volume = 255
+
+[State -2, 空中やられ0]
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Time = 1
+triggerall = life > 0
+trigger1 = Anim = 5030
+persistent = 0
+channel = 10
+value = 500,ifelse((Random<500),0,7)
+lowpriority = 1
+volume = 255
+
+[State -2, 空中やられ1]
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Time = 1
+triggerall = life > 0
+trigger1 = Anim = 5030
+persistent = 0
+channel = 10
+value = 500,1
+lowpriority = 1
+volume = 255
+
+[State -2, 空中やられ2]
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Time = 1
+triggerall = life > 0
+trigger1 = Anim = 5030
+persistent = 0
+channel = 10
+value = 500,9
+lowpriority = 1
+volume = 255
+
+[State -2, 空中やられ3]
+type = PlaySnd
+triggerall = var(38) = 3
+triggerall = Time = 1
+triggerall = life > 0
+trigger1 = Anim = 5030
+persistent = 0
+channel = 10
+value = 500,6
+lowpriority = 1
+volume = 255
+
+[State -2, 空中やられ4]
+type = PlaySnd
+triggerall = var(38) = 4
+triggerall = Time = 1
+triggerall = life > 0
+trigger1 = Anim = 5030
+persistent = 0
+channel = 10
+value = 500,8
+lowpriority = 1
+volume = 255
+
+[State -2, バウンドA1]
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Time = 1
+triggerall = life != 0
+trigger1 = StateNo = 5100
+trigger1 = Anim = 5100
+value = 500,0
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 255
+
+[State -2, バウンドA2]
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Time = 1
+triggerall = life != 0
+trigger1 = StateNo = 5100
+trigger1 = Anim = 5100
+value = 500,1
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 255
+
+[State -2, バウンドA3]
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Time = 1
+triggerall = life != 0
+trigger1 = StateNo = 5100
+trigger1 = Anim = 5100
+value = 500,2
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 255
+
+[State -2, バウンドA4]
+type = PlaySnd
+triggerall = var(38) = 3
+triggerall = Time = 1
+triggerall = life != 0
+trigger1 = StateNo = 5100
+trigger1 = Anim = 5100
+value = 500,5
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 255
+
+[State -2, バウンドA5]
+type = PlaySnd
+triggerall = var(38) = 4
+triggerall = Time = 1
+triggerall = life != 0
+trigger1 = StateNo = 5100
+trigger1 = Anim = 5100
+value = 500,4
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 255
+
+[State -2, バウンドB]
+type = PlaySnd
+triggerall = var(38) = 0
+triggerall = Time = 1
+triggerall = life != 0
+trigger1 = StateNo = 5100
+trigger1 = Anim = 5101
+trigger2 = StateNo = 5100
+trigger2 = Anim = 5102
+value = 500,4
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 255
+
+[State -2, バウンドB]
+type = PlaySnd
+triggerall = var(38) = 1
+triggerall = Time = 1
+triggerall = life > 0
+trigger1 = StateNo = 5100
+trigger1 = Anim = 5101
+trigger2 = StateNo = 5100
+trigger2 = Anim = 5102
+value = 500,6
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 255
+
+[State -2, バウンドB]
+type = PlaySnd
+triggerall = var(38) = 2
+triggerall = Time = 1
+trigger1 = StateNo = 5100
+trigger1 = Anim = 5101
+trigger2 = StateNo = 5100
+trigger2 = Anim = 5102
+value = 500,8
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 255
+
+[State -2, バウンドB]
+type = PlaySnd
+triggerall = var(38) = 3
+triggerall = Time = 1
+trigger1 = StateNo = 5100
+trigger1 = Anim = 5101
+trigger2 = StateNo = 5100
+trigger2 = Anim = 5102
+value = 500,2
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 255
+
+[State -2, バウンドB]
+type = PlaySnd
+triggerall = var(38) = 4
+triggerall = Time = 1
+trigger1 = StateNo = 5100
+trigger1 = Anim = 5101
+trigger2 = StateNo = 5100
+trigger2 = Anim = 5102
+value = 500,5
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 255
+
+[State -2, ダウン中]
+type = PlaySnd
+;triggerall = life = 0
+trigger1 = anim = 5110
+trigger1 = animElem = 3
+trigger2 = anim = 5111
+trigger2 = animElem = 4
+trigger3 = anim = 5112
+trigger3 = animElem = 4
+value = 600,0
+persistent = 0
+;channel = 10
+lowpriority = 1
+volume = 255
+
+;投げられ-----------------
+[State -3, 0];Random
+type = VarRandom
+trigger1 = movetype = H
+trigger1 = stateno != [120,155]
+trigger1 = stateno != [5000,5600]
+v = 38
+range = 0,4
+
+[State -3, 0];Random
+type = Varadd
+trigger1 = life > 0
+trigger1 = var(39) > -10
+v = 39
+value = -1
+
+[State -2, 0]
+type = playSnd
+triggerall = movetype = H
+triggerall = stateno != [120,155]
+triggerall = stateno != [5000,5600]
+triggerall = var(38) = 0
+trigger1 = Alive
+trigger1 = !IsHelper
+trigger1 = var(37) -life > 0
+trigger1 = Life < var(37)
+trigger1 = anim != 9020
+trigger1 = var(39) < 1
+value = 500,4
+;channel = 10
+lowpriority = 1
+
+[State -2, 0]
+type = playSnd
+triggerall = movetype = H
+triggerall = stateno != [120,155]
+triggerall = stateno != [5000,5600]
+triggerall = var(38) = 1
+trigger1 = Alive
+trigger1 = !IsHelper
+trigger1 = var(37) -life > 0
+trigger1 = Life < var(37)
+trigger1 = anim != 9020
+trigger1 = var(39) < 1
+value = 500,6
+;channel = 10
+lowpriority = 1
+
+[State -2, 0]
+type = playSnd
+triggerall = movetype = H
+triggerall = stateno != [120,155]
+triggerall = stateno != [5000,5600]
+triggerall = var(38) = 2
+trigger1 = Alive
+trigger1 = !IsHelper
+trigger1 = var(37) -life > 0
+trigger1 = Life < var(37)
+trigger1 = anim != 9020
+trigger1 = var(39) < 1
+value = 500,9
+;channel = 10
+lowpriority = 1
+
+[State -2, 0]
+type = playSnd
+triggerall = movetype = H
+triggerall = stateno != [120,155]
+triggerall = stateno != [5000,5600]
+triggerall = var(38) = 3
+trigger1 = Alive
+trigger1 = !IsHelper
+trigger1 = var(37) -life > 0
+trigger1 = Life < var(37)
+trigger1 = anim != 9020
+trigger1 = var(39) < 1
+value = 500,8
+;channel = 10
+lowpriority = 1
+
+[State -2, 0]
+type = playSnd
+triggerall = movetype = H
+triggerall = stateno != [120,155]
+triggerall = stateno != [5000,5600]
+triggerall = var(38) = 4
+trigger1 = Alive
+trigger1 = !IsHelper
+trigger1 = var(37) -life > 0
+trigger1 = Life < var(37)
+trigger1 = anim != 9020
+value = 500,ifelse((Random<500),7,2)
+trigger1 = var(39) < 1
+;channel = 10
+lowpriority = 1
+
+[State -2, 0]
+type = playSnd
+triggerall = movetype = H
+triggerall = stateno != [120,155]
+triggerall = stateno != [5000,5600]
+triggerall = var(38) = 9
+trigger1 = Alive
+trigger1 = !IsHelper
+trigger1 = var(37) -life > 0
+trigger1 = Life < var(37)
+trigger1 = anim != 9020
+trigger1 = var(39) < 1
+value = 500,4
+;channel = 10
+lowpriority = 1
+
+[State -2, 0]
+type = varset
+triggerall = movetype = H
+triggerall = stateno != [120,155]
+triggerall = stateno != [5000,5600]
+trigger1 = var(37) -life > 0
+trigger1 = Life < var(37)
+;trigger1 = time = 0
+trigger1 = !IsHelper
+trigger1 = Alive
+trigger1 = var(39) < 0
+v = 39
+value = 13
+
+[State -2, 0]
+type = varset
+trigger1 = 1
+var(37) = Life
+
+[State -2, ガード]
+type = PlaySnd
+triggerall = life > 0
+triggerall = Random < 350
+trigger1 = anim = 150
+trigger1 = time = 1
+trigger2 = anim = 151
+trigger2 = time = 1
+value = 400,ifelse((Random<700),0,1)
+persistent = 0
+channel = 10
+lowpriority = 1
+volume = 230
+
+[State -2, KO]
+type = assertspecial
+triggerall = Pos Y >= -5
+triggerall = PrevStateno != 5110
+triggerall = PrevStateno != 5050
+triggerall = HitShakeOver = 0
+trigger1 = Enemy,stateno = 200||Enemy,stateno = 400||Enemy,stateno = 600
+trigger2 = Enemy,stateno = 230||Enemy,stateno = 430||Enemy,stateno = 630
+flag = nokosnd
+
+[State -2, 0]
+type = assertspecial
+triggerall = ((prevstateno=120||prevstateno=140)&&Pos Y>=0) || (prevstateno = [130,131]) || prevstateno = [150,153]
+trigger1 = Stateno = [5000,5050]
+trigger1 = GetHitVar(damage) < 30
+trigger1 = enemy,HitDefAttr = SCA,SA,ST,SP
+trigger2 = enemy,HitDefAttr = SCA,HA,HT,HP
+;trigger3 = enemy,HitDefAttr = SCA
+flag = nokosnd
+
+[State -2, KO]
+type = PlaySnd
+trigger1 = Anim = 5130
+trigger1 = stateno = 5130
+trigger1 = var(24) > 0
+trigger1 = var(39) < 100
+trigger1 = life = 0
+trigger1 = Time = 6
+value = 11,1
+lowpriority = 1
+volume = 255
+
+[State -2, KO]
+type = Varset
+trigger1 = life = 0
+trigger1 = Time = 6
+v = 39
+value = 100
+
+[State -2, タイムオーバー負け]
+type = PlaySnd
+triggerall = movetype != H
+triggerall = time = 12
+trigger1 = Anim = 170
+trigger2 = Anim = 175
+value = 11,2
+lowpriority = 1
+volume = 255
+
+[State -2, 0];勝利2
+type = PlaySnd
+triggerall = stateno = 181
+trigger1 = AnimElem = 6
+value = 300,2
+volume = 255
+channel = 0
+
+[State -2, 0];勝利2
+type = PlaySnd
+triggerall = stateno = 181
+trigger1 = time = 135
+value = 300,1
+volume = 255
+channel = 0
+
+[State -2, 0];勝利1
+type = PlaySnd
+triggerall = stateno = 183
+trigger1 = time = 57
+value = 300,0
+volume = 255
+channel = 0
+
+[State -2, 0];イントロ
+type = PlaySnd
+triggerall = stateno = 191
+trigger1 = time = 40
+value = 300,3
+volume = 255
+channel = 0
+
+;This controller plays a sound everytime KFM lands from a jump, or
+;from his back-dash.
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 52 ;Jump land
+trigger2 = stateno = 106 ;Run-back land
+value = 40, 0
