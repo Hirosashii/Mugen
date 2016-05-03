@@ -1,0 +1,42 @@
+; Definition file for Kung Fu Man
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Tios"        ;Name of character
+displayname = "Tios" ;Name of character to display
+versiondate = 04,14,2002    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+author = "ma-bo"         ;Character author name
+pal.defaults = 6,3,4,2      ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = tios.cmd   ;Command set
+cns     = tios.cns   ;Constants
+st      = normal.cns   ;States
+St2	= special.cns
+St3	= super.cns
+St4	= override.cns
+St5	= voice.cns
+St6	= tios-3.cns
+stcommon = common1.cns ;Common states
+sprite  = tios.sff   ;Sprite
+anim    = tios.air   ;Animation
+sound   = tios.snd   ;Sound
+pal1    = pal02.act;基本カラー 弱Ｋ
+pal2    = pal03.act;金　中Ｋ
+pal3    = pal05.act;ブルー　強Ｋ
+pal4    = pal02.act;基本カラー 弱Ｐ
+pal5    = pal04.act;赤　中Ｐ
+pal6    = pal06.act;青　強Ｐ
+pal7    = pal07.act
+pal8    = pal08.act
+pal9    = pal09.act
+pal10    = pal10.act
+pal11    = pal11.act
+
+; Arcade mode
+[Arcade]
+intro.storyboard = intro.def
+ending.storyboard = ending.def
